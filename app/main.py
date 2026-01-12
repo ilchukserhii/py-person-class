@@ -1,5 +1,6 @@
 class Person:
     people = {}
+
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
@@ -17,4 +18,5 @@ def create_person_list(people: list) -> list:
         husband_name = person.get("husband")
         if husband_name is not None:
             Person.people[person["name"]].husband = Person.people[husband_name]
+
     return list_of_persons
